@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="views/|controllers/|helpers/|models/|views/timelines/|libs/" kind="src" path="app"/>
+	<classpathentry kind="src" path="app/controllers"/>
+	<classpathentry kind="src" path="app/helpers"/>
+	<classpathentry kind="src" path="app/libs"/>
+	<classpathentry kind="src" path="app/models"/>
+	<classpathentry excluding="timelines/" kind="src" path="app/views"/>
+	<classpathentry kind="src" path="app/views/timelines"/>
+	<classpathentry kind="src" path="spazcore"/>
+	<classpathentry kind="src" path="themes/Dumb Terminal"/>
+	<classpathentry kind="src" path="themes/Leopaz"/>
+	<classpathentry kind="src" path="themes/spaz"/>
+	<classpathentry kind="src" path="themes/spaz-mini"/>
+	<classpathentry kind="src" path="themes/Terminal64"/>
+	<classpathentry kind="src" path="themes/whitespace"/>
+	<classpathentry excluding="spry/widgets/textfieldvalidation/|spry/widgets/textareavalidation/|lawnchair/|spry/widgets/tabbedpanels/|jquery/|spry/widgets/collapsiblepanel/|air/|lawnchair/adaptors/" kind="src" path="vendors"/>
+	<classpathentry kind="src" path="vendors/air"/>
+	<classpathentry kind="src" path="vendors/jquery"/>
+	<classpathentry excluding="adaptors/" kind="src" path="vendors/lawnchair"/>
+	<classpathentry kind="src" path="vendors/lawnchair/adaptors"/>
+	<classpathentry kind="src" path="vendors/spry/widgets/collapsiblepanel"/>
+	<classpathentry kind="src" path="vendors/spry/widgets/tabbedpanels"/>
+	<classpathentry kind="src" path="vendors/spry/widgets/textareavalidation"/>
+	<classpathentry kind="src" path="vendors/spry/widgets/textfieldvalidation"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

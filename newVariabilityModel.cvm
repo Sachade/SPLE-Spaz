@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<de.mopr.cvm:VariabilityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.mopr.cvm="http:///de/mopr/cvm.ecore" id="0f93d654-ccd4-47ab-aa32-62d849d84300" name="New Variability Model">
+  <rootEntries xsi:type="de.mopr.cvm:FeatureModel" id="a189eed7-571f-40ba-bbca-3df73b9af40f" name="CustomerFM">
+    <rootFeatures id="b81b624d-0ae8-4147-8d0f-96406a926411" name="Market">
+      <cardinality>
+        <intervals end="1"/>
+      </cardinality>
+      <childNodes xsi:type="de.mopr.cvm:FeatureGroup" id="1a81b63c-e985-49ac-a14b-52db92183c6f">
+        <cardinality>
+          <intervals start="1" end="1"/>
+        </cardinality>
+        <childFeatures id="e22809c4-382c-4ae3-9533-b593f4ad40bb" name="Light">
+          <cardinality>
+            <intervals end="1"/>
+          </cardinality>
+        </childFeatures>
+        <childFeatures id="507b8e27-ea73-470c-99de-8eb5fbb2261a" name="Standard">
+          <cardinality>
+            <intervals end="1"/>
+          </cardinality>
+        </childFeatures>
+        <childFeatures id="5996f134-9e69-4a1d-9ba0-81f3fa20898f" name="Pro">
+          <cardinality>
+            <intervals end="1"/>
+          </cardinality>
+        </childFeatures>
+      </childNodes>
+    </rootFeatures>
+  </rootEntries>
+</de.mopr.cvm:VariabilityModel>

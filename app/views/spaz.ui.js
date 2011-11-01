@@ -551,8 +551,8 @@ Spaz.UI.showTooltip = function(el, str, previewurl) {
 
     var opts = {
         'el': el,
-        'previewurl': previewurl,
-    }
+        'previewurl': previewurl
+    };
 
     // if (e) { opts['e'] = e }
     if (event) {

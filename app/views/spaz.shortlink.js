@@ -62,7 +62,7 @@ Spaz.Shortlink.services = {
                 var shorturl = sch.trim(xhr.responseText);
                 
 				if (shorturl.search(/^http/i)!=-1) {
-					Spaz.Shortlink.$copyToClipboard(shorturl)
+					Spaz.Shortlink.$copyToClipboard(shorturl);
                 } else {
                     $('#verification-result').text("Service returned an error: '" + shorturl + "'");
                 }
@@ -103,7 +103,7 @@ Spaz.Shortlink.services = {
 				var shorturl = sch.trim(xhr.responseText);
 	
 				if (shorturl.search(/^http/i)!=-1) {
-					Spaz.Shortlink.$copyToClipboard(shorturl)
+					Spaz.Shortlink.$copyToClipboard(shorturl);
 				} else {
 					$('#verification-result').text("Service returned an error: '"+shorturl+"'");
 				}
@@ -126,7 +126,7 @@ Spaz.Shortlink.services = {
 			processData:false,
 			type:"POST",
 			url:'http://tweetburner.com/links',
-			data:"link[url]="+url,
+			data:"link[url]="+url
 		});		
 	},
 
@@ -148,7 +148,7 @@ Spaz.Shortlink.services = {
 				var shorturl = sch.trim(xhr.responseText);
 
 				if (shorturl.search(/^http/i)!=-1) {
-					Spaz.Shortlink.$copyToClipboard(shorturl)
+					Spaz.Shortlink.$copyToClipboard(shorturl);
 				} else {
 					$('#verification-result').text("Service returned an error: '"+shorturl+"'");
 				}
@@ -171,7 +171,7 @@ Spaz.Shortlink.services = {
 			processData:false,
 			type:"GET",
 			url:'http://bit.ly/api',
-			data:"url="+origlink,
+			data:"url="+origlink
 		});
 	},
 	
@@ -195,7 +195,7 @@ Spaz.Shortlink.services = {
 				var shorturl = sch.trim(xhr.responseText);
 
 				if (shorturl.search(/^http/i)!=-1) {
-					Spaz.Shortlink.$copyToClipboard(shorturl)
+					Spaz.Shortlink.$copyToClipboard(shorturl);
 				} else {
 					$('#verification-result').text("Service returned an error: '"+shorturl+"'");
 				}
@@ -218,7 +218,7 @@ Spaz.Shortlink.services = {
 			processData:false,
 			type:"GET",
 			url:'http://urlzen.com/api',
-			data:"url="+origlink,
+			data:"url="+origlink
 		});
 	},
 	
@@ -242,7 +242,7 @@ Spaz.Shortlink.services = {
 				var shorturl = sch.trim(xhr.responseText);
 
 				if (shorturl.search(/^http/i)!=-1) {
-					Spaz.Shortlink.$copyToClipboard(shorturl)
+					Spaz.Shortlink.$copyToClipboard(shorturl);
 				} else {
 					$('#verification-result').text("Service returned an error: '"+shorturl+"'");
 				}
@@ -265,7 +265,7 @@ Spaz.Shortlink.services = {
 			processData:false,
 			type:"GET",
 			url:'http://metamark.net/api/rest/simple',
-			data:"long_url="+origlink,
+			data:"long_url="+origlink
 		});
 	},
 	
@@ -295,7 +295,7 @@ Spaz.Shortlink.services = {
 				var shorturl = sch.trim(xhr.responseText);
 
 				if (shorturl.search(/^http/i)!=-1) {
-					Spaz.Shortlink.$copyToClipboard(shorturl)
+					Spaz.Shortlink.$copyToClipboard(shorturl);
 				} else {
 					$('#verification-result').text("Service returned an error: '"+shorturl+"'");
 				}
@@ -342,7 +342,7 @@ Spaz.Shortlink.services = {
 				var shorturl = sch.trim(xhr.responseText);
 
 				if (shorturl.search(/^http/i)!=-1) {
-					Spaz.Shortlink.$copyToClipboard(shorturl)
+					Spaz.Shortlink.$copyToClipboard(shorturl);
 				} else {
 					$('#verification-result').text("Service returned an error: '"+shorturl+"'");
 				}
@@ -365,7 +365,7 @@ Spaz.Shortlink.services = {
 			processData:false,
 			type:"GET",
 			url:'http://revcanonical.appspot.com/api',
-			data:"url="+origlink,
+			data:"url="+origlink
 		});
 	},
 
@@ -388,7 +388,7 @@ Spaz.Shortlink.services = {
 				var shorturl = sch.trim(xhr.responseText);
 
 				if (shorturl.search(/^http/i)!=-1) {
-					Spaz.Shortlink.$copyToClipboard(shorturl)
+					Spaz.Shortlink.$copyToClipboard(shorturl);
 				} else {
 					$('#verification-result').text("Service returned an error: '"+shorturl+"'");
 				}
@@ -411,11 +411,11 @@ Spaz.Shortlink.services = {
 			processData:false,
 			type:"GET",
 			url:'http://is.gd/api.php',
-			data:"longurl="+origlink,
+			data:"longurl="+origlink
 		});
 	}
 	
-}
+};
 
 
 

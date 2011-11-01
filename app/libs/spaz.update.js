@@ -88,7 +88,7 @@ Spaz.Update.getNewestVersion = function(url) {
 		error: function(xhr, rstr) {
 			sch.debug('Error getting newest version');
 			sch.debug(xhr.responseText);
-		},
+		}
 	});
 	
 };

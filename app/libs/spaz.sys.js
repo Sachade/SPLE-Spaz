@@ -82,7 +82,7 @@ Spaz.Sys.getRuntimeInfo = function(){
 		os : air.Capabilities.os,
 		version: air.Capabilities.version, 
 		manufacturer: air.Capabilities.manufacturer,
-		totalMemory: air.System.totalMemory,
+		totalMemory: air.System.totalMemory
 		
 	};
 }

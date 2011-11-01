@@ -1,30 +1,111 @@
 <?xml version="1.0" encoding="ASCII"?>
-<de.mopr.cvm:VariabilityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.mopr.cvm="http:///de/mopr/cvm.ecore" id="0f93d654-ccd4-47ab-aa32-62d849d84300" name="New Variability Model">
-  <rootEntries xsi:type="de.mopr.cvm:FeatureModel" id="a189eed7-571f-40ba-bbca-3df73b9af40f" name="CustomerFM">
-    <rootFeatures id="b81b624d-0ae8-4147-8d0f-96406a926411" name="Market">
+<de.mopr.cvm:VariabilityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.mopr.cvm="http:///de/mopr/cvm.ecore" id="a35a9ea1-d3a1-44e9-b210-181746348b55" name="Converted Variability Model" description="Converted from VSL file &quot;newVariabilityModel.vsl&quot; on 2011-nov-01 14:57:44">
+  <rootEntries xsi:type="de.mopr.cvm:FeatureModel" id="9965a33a-a091-4b6e-96b6-9fb0f7689ac7" name="CustomerFM">
+    <rootFeatures id="03ed0154-8163-4414-97bd-6e0aa6d4792c" name="Market">
       <cardinality>
-        <intervals end="1"/>
+        <intervals start="1" end="1"/>
       </cardinality>
-      <childNodes xsi:type="de.mopr.cvm:FeatureGroup" id="1a81b63c-e985-49ac-a14b-52db92183c6f">
+      <childNodes xsi:type="de.mopr.cvm:FeatureGroup" id="fb8ba892-2cbe-4aad-bb40-cacdf4661716">
         <cardinality>
           <intervals start="1" end="1"/>
         </cardinality>
-        <childFeatures id="e22809c4-382c-4ae3-9533-b593f4ad40bb" name="Light">
+        <childFeatures id="51235485-c700-4119-8dd0-31734a6b0e66" name="Light">
           <cardinality>
             <intervals end="1"/>
           </cardinality>
         </childFeatures>
-        <childFeatures id="507b8e27-ea73-470c-99de-8eb5fbb2261a" name="Standard">
+        <childFeatures id="b90a95a6-b726-4681-91c7-8af2312b97de" name="Standard">
           <cardinality>
             <intervals end="1"/>
           </cardinality>
         </childFeatures>
-        <childFeatures id="5996f134-9e69-4a1d-9ba0-81f3fa20898f" name="Pro">
+        <childFeatures id="c8734e0e-93e1-4b2e-a3f5-55430185af07" name="Pro">
           <cardinality>
             <intervals end="1"/>
           </cardinality>
         </childFeatures>
       </childNodes>
     </rootFeatures>
+  </rootEntries>
+  <rootEntries xsi:type="de.mopr.cvm:FeatureModel" id="75c74e74-1f8f-486b-afb4-c9971e9ad83f" name="TechFM">
+    <rootFeatures id="515dcacb-f97a-43b3-9eb0-3c53717e6bb7" name="Profile Management">
+      <cardinality>
+        <intervals end="1"/>
+      </cardinality>
+    </rootFeatures>
+    <rootFeatures id="380e795c-1774-46b5-b664-f8a6fdbc315d" name="Timeline">
+      <cardinality>
+        <intervals start="1" end="1"/>
+      </cardinality>
+    </rootFeatures>
+    <rootFeatures id="10148f4f-8387-4f68-81c8-15c66bb26435" name="Managing Several Accounts">
+      <cardinality>
+        <intervals end="1"/>
+      </cardinality>
+      <childNodes xsi:type="de.mopr.cvm:FeatureGroup" id="c5d5b316-fb34-404e-9abf-5e298bf0fbdd">
+        <cardinality>
+          <intervals start="1" end="1"/>
+        </cardinality>
+        <childFeatures id="ee8a1876-99c2-4af6-8ae1-48c337087793" name="Switch Accounts">
+          <cardinality>
+            <intervals end="1"/>
+          </cardinality>
+        </childFeatures>
+        <childFeatures id="cdf5b712-d6bf-41e3-bbd6-99cfe801afa0" name="Multiple Accounts">
+          <cardinality>
+            <intervals end="1"/>
+          </cardinality>
+        </childFeatures>
+      </childNodes>
+    </rootFeatures>
+    <rootFeatures id="a5700126-c92e-404a-95d8-d88e9a13fead" name="Send Tweet">
+      <cardinality>
+        <intervals start="1" end="1"/>
+      </cardinality>
+      <childNodes xsi:type="de.mopr.cvm:Feature" id="efb4f761-1c11-47de-a4ad-a139026f098d" name="Short URL" endingLinks="//@rootEntries.1/@featureLinks.0">
+        <cardinality>
+          <intervals end="1"/>
+        </cardinality>
+      </childNodes>
+      <childNodes xsi:type="de.mopr.cvm:Feature" id="b512fb39-9b5e-410a-bdf8-c697501784a1" name="Upload Picture" startingLinks="//@rootEntries.1/@featureLinks.0">
+        <cardinality>
+          <intervals end="1"/>
+        </cardinality>
+      </childNodes>
+    </rootFeatures>
+    <rootFeatures id="1ea34a84-985a-4455-b767-66f0a99eb2a4" name="Search">
+      <cardinality>
+        <intervals end="1"/>
+      </cardinality>
+    </rootFeatures>
+    <rootFeatures id="9c167c39-f89e-443e-a2a9-1e96d038e0d1" name="Notifications">
+      <cardinality>
+        <intervals end="1"/>
+      </cardinality>
+    </rootFeatures>
+    <rootFeatures id="8d1c92a7-c83b-4651-b6da-b611b6b55979" name="Themes">
+      <cardinality>
+        <intervals end="1"/>
+      </cardinality>
+      <childNodes xsi:type="de.mopr.cvm:Feature" id="66ad455f-8ad2-46ca-9676-bfa16c9fa5ef" name="Custom Themes">
+        <cardinality>
+          <intervals end="1"/>
+        </cardinality>
+      </childNodes>
+    </rootFeatures>
+    <rootFeatures id="c0d42603-ec12-4dac-9c28-6e377d761679" name="Lists">
+      <cardinality>
+        <intervals end="1"/>
+      </cardinality>
+    </rootFeatures>
+    <featureLinks id="fec7122a-613e-4b12-9436-57fa1e29351e" type="needs" start="//@rootEntries.1/@rootFeatures.3/@childNodes.1" end="//@rootEntries.1/@rootFeatures.3/@childNodes.0"/>
+  </rootEntries>
+  <rootEntries xsi:type="de.mopr.cvm:ConfigDecisionModel" id="cf5bfb4e-547d-4475-8569-6b556d1e6dd7" name="CDM">
+    <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="e820a22d-3d84-4f6b-bf94-b2ce0ff1f141" criterion="TRUE" effect="Timeline[1], &quot;Send Tweet&quot;[1]"/>
+    <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="67aa5e3b-1525-4ce3-bfa3-f82e8267e73f" criterion="( Standard[1] | Pro[1] )" effect="&quot;Profile Management&quot;[1], &quot;Short URL&quot;[1], Search[1], Notifications[1], &quot;Upload Picture&quot;[1], Themes[1]"/>
+    <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="c6680c43-37c0-42e1-a45c-76c2c59ce908" criterion="Standard[1]" effect="&quot;Switch Accounts&quot;[+]"/>
+    <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="b27c0037-f630-49fd-ad60-41245b2fbf01" criterion="Pro[1]" effect="&quot;Custom Themes&quot;[1], &quot;Multiple Accounts&quot;[+], Lists[1]"/>
+    <sourceFeatureModels type="//@rootEntries.0"/>
+    <targetFeatureModels type="//@rootEntries.1"/>
   </rootEntries>
 </de.mopr.cvm:VariabilityModel>

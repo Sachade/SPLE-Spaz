@@ -1,0 +1,39 @@
+public featureModel CustomerFM {
+	Market[1] (
+		[1] (
+			Light,
+			Standard,
+			Pro
+		)
+	);
+}
+
+public featureModel TechFM {
+	"Profile Management",
+	Timeline[1],
+	"Managing Several Accounts" (
+		[1] (
+			"Switch Accounts",
+			"Multiple Accounts"
+		)
+	),
+	"Send Tweet"[1] (
+		"Short URL",
+		"Upload Picture"
+	),
+	Search,
+	Notifications,
+	Themes (
+		"Custom Themes"
+	),
+	Lists;
+
+	link "Upload Picture" = needs > "Short URL";
+}
+
+public configLink CDM (CustomerFM --> TechFM) {
+	TRUE --> Timeline[1], "Send Tweet"[1];
+	( Standard[1] | Pro[1] ) --> "Profile Management"[1], "Short URL"[1], Search[1], Notifications[1], "Upload Picture"[1], Themes[1];
+	Standard[1] --> "Switch Accounts"[+];
+	Pro[1] --> "Custom Themes"[1], "Multiple Accounts"[+], Lists[1];
+}

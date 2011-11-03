@@ -26,9 +26,11 @@ public featureModel TechFM {
 	Themes (
 		"Custom Themes"
 	),
-	Lists;
+	Lists,
+	"Bit.ly API protocol";
 
 	link "Upload Picture" = needs > "Short URL";
+	link "Short URL" = needs > "Bit.ly API protocol";
 }
 
 public configLink CDM (CustomerFM --> TechFM) {

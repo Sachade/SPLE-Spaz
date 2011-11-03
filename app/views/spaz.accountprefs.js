@@ -61,6 +61,12 @@ Spaz.AccountPrefs.init = function(){
 			$saveAccountButton.unbind('click');
 			$cancelAccountButton.unbind('click');
 			
+			//TODO: Only allow to add one file
+			/*if(Spaz.AccountPrefs.count() > 0)
+			{
+				return;
+			}*/
+			
 			sch.debug('SHOW #account-details');
 			Spaz.UI.openPopboxInline('#account-details');
 			

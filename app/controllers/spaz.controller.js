@@ -6,7 +6,7 @@
 
 var Spaz; if (!Spaz) Spaz = {};
 
-if (!Spaz.Controller) Spaz.Controller = {};
+if (!Spaz.Controller) Spaz.Controller = {}; 
 
 
 

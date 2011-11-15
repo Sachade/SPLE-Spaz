@@ -12,9 +12,15 @@
 		<target name="pre">
 			<preprocess indir="${src.dir}" outdir="${tgt.dir}" out = "replace">
 				<var name="fullVersion" value="true" />
+				<var name="standardVersion" value="false" />
 				<filetype commentend="*/" commentbegin="/*" extensions="js"/>
 			</preprocess>
 		</target>
+	
+	<target name="query">
+		<xmltask source="newVariabilityModel.cvm">
+			<copy 
+				path ="boolean(//rootEntries[@effect='']"
 	
 	<target name="clean">
 		<delete dir="${tgt.dir}" />

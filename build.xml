@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Ant-Test" default="main" basedir=".">
+	<property name="src.dir" location="appSource" />
+	<property name="tgt.dir" location="app"/>
+
+	
+	<target name="makedir">
+		<mkdir dir="${tgt.dir}" />
+	</target>
+		
+		<target name="pre">
+			<preprocess indir="${src.dir}" outdir="${tgt.dir}" out = "replace">
+				<var name="fullVersion" value="true" />
+				<filetype commentend="*/" commentbegin="/*" extensions="js"/>
+			</preprocess>
+		</target>
+	
+	<target name="clean">
+		<delete dir="${tgt.dir}" />
+	</target>
+	
+	<target name="compile" depends="clean,makedir,pre">
+		
+	</target>
+	
+	<target name="main" depends="compile">
+		<description>Main Target</description>
+	</target>
+		
+	</project>
+	

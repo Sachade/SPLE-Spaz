@@ -11,7 +11,7 @@ if (!Spaz.Controller) Spaz.Controller = {};
 
 
 /*
-	Handle verifyCredentials 
+	Handle verifyCredentials
 */
 sch.listen(document, 'verify_credentials_succeeded', function(e) {
 	sch.dump('verified; setting current user');

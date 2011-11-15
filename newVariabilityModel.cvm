@@ -108,7 +108,7 @@
   </rootEntries>
   <rootEntries xsi:type="de.mopr.cvm:ConfigDecisionModel" id="01110ed2-2a9d-44ae-aeda-8dbc46fd44f6" name="CDM">
     <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="01252c4f-f9ba-43c3-8082-b5ce88a930f1" criterion="TRUE" effect="Timeline[1], &quot;Send Tweet&quot;[1]"/>
-    <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="3511af60-cce2-4ff7-a3b4-75f6a9a7241c" criterion="( Standard[1] | Pro[1] )" effect="&quot;Profile Management&quot;[1], &quot;Short URL&quot;[1], Search[1], Notifications[1], &quot;Upload Picture&quot;[1], Themes[1]"/>
+    <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="3511af60-cce2-4ff7-a3b4-75f6a9a7241c" criterion="( Standard[1] | Pro[1] )" effect="&quot;Profile Management&quot;[1], &quot;Short URL&quot;[1], Search[1], Notifications[1], &quot;Upload Picture&quot;[1], Themes[1],&quot;Bit.ly API protocol&quot;"/>
     <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="66d3f44c-89c6-41c4-b0a9-c47aafadc9b9" criterion="Standard[1]" effect="&quot;Switch Accounts&quot;[+]"/>
     <rootEntries xsi:type="de.mopr.cvm:ConfigDecision" id="0b87847c-d7c6-40c2-bab5-c1e395159782" criterion="Pro[1]" effect="&quot;Custom Themes&quot;[1], &quot;Multiple Accounts&quot;[+], Lists[1]"/>
     <sourceFeatureModels type="//@rootEntries.0"/>

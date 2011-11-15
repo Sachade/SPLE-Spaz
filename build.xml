@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
+
 <project name="Ant-Test" default="main" basedir=".">
 	<property name="src.dir" location="appSource" />
 	<property name="tgt.dir" location="app"/>
 
+	<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask"/>
 	
 	<target name="makedir">
 		<mkdir dir="${tgt.dir}" />
@@ -11,24 +14,38 @@
 		
 		<target name="pre">
 			<preprocess indir="${src.dir}" outdir="${tgt.dir}" out = "replace">
-				<var name="fullVersion" value="true" />
-				<var name="standardVersion" value="false" />
+				<!--var name="fullVersion" value="true" /-->
+				<!--var name="standardVersion" value="false" /-->
 				<filetype commentend="*/" commentbegin="/*" extensions="js"/>
 			</preprocess>
 		</target>
 	
+	
 	<target name="query">
 		<xmltask source="newVariabilityModel.cvm">
 			<copy 
-				path ="boolean(//rootEntries[@effect='']"
-	
+				path ="boolean(//rootEntries[@effect='&quot;Switch Accounts&quot;[+]'])"
+				property="standardVersion" />
+			<copy
+				path = "boolean(//rootEntries[@effect='&quot;Custom Themes&quot;[1]'])"
+				property="fullVersion" />
+			</xmltask>
+		<echo message = "value of standard: ${standardVersion}" />
+		<echo message = "value of full: ${fullVersion}" />
+		</target>
+
 	<target name="clean">
 		<delete dir="${tgt.dir}" />
 	</target>
 	
-	<target name="compile" depends="clean,makedir,pre">
+	<target name="compile" depends="clean,makedir,query,pre">
 		
 	</target>
+	
+
+
+							
+				
 	
 	<target name="main" depends="compile">
 		<description>Main Target</description>

@@ -3,8 +3,8 @@
 
 
 <project name="Ant-Test" default="main" basedir=".">
-	<property name="src.dir" location="appSource" />
-	<property name="tgt.dir" location="app"/>
+	<property name="src.dir" location="Source" />
+	<property name="tgt.dir" location="Target"/>
 
 	<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask"/>
 	
@@ -14,9 +14,22 @@
 		
 		<target name="pre">
 			<preprocess indir="${src.dir}" outdir="${tgt.dir}" out = "replace">
-				<!--var name="fullVersion" value="true" /-->
-				<!--var name="standardVersion" value="false" /-->
-				<filetype commentend="*/" commentbegin="/*" extensions="js"/>
+				<var name="timeline" value="${timeline}" />
+				<var name="sendTweet" value="${sendTweet}" />
+				<var name="profileManagement" value="${profileManagement}" />
+				<var name="shortURL" value="${shortURL}" />
+				<var name="search" value="${search}" />
+				<var name="notifications" value="${notifications}" />
+				<var name="uploadPicture" value="${uploadPicture}" />
+				<var name="themes" value="${themes}" />
+				<var name="bitly" value="${bitly}" />
+				<var name="switchAccounts" value="${switchAccounts}" />
+				<var name="customThemes" value="${customThemes}" />
+				<var name="multipleAccounts" value="${multipleAccounts}" />
+				<var name="lists" value="${lists}" />
+				
+				<filetype commentbegin="/*" 	 commentend="*/"     extensions="js" />
+				<filetype commentbegin="&lt;!--" commentend="--&gt;" extensions="html" />
 			</preprocess>
 		</target>
 	
@@ -24,15 +37,62 @@
 	<target name="query">
 		<xmltask source="newVariabilityModel.cvm">
 			<copy 
-				path ="boolean(//rootEntries[@effect='&quot;Switch Accounts&quot;[+]'])"
-				property="standardVersion" />
-			<copy
-				path = "boolean(//rootEntries[@effect='&quot;Custom Themes&quot;[1]'])"
-				property="fullVersion" />
-			</xmltask>
-		<echo message = "value of standard: ${standardVersion}" />
-		<echo message = "value of full: ${fullVersion}" />
-		</target>
+				path ="boolean(//rootEntries[@effect='Timeline[1]' and @criterion='true'])"
+				property="timeline" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='SendTweet[1]' and @criterion='true'])"
+				property="sendTweet" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='ProfileManagement[1]' and @criterion='true'])"
+				property="profileManagement" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='ShortURL[1]' and @criterion='true'])"
+				property="shortURL" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='Search[1]' and @criterion='true'])"
+				property="search" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='Notifications[1]' and @criterion='true'])"
+				property="notifications" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='UploadPicture[1]' and @criterion='true'])"
+				property="uploadPicture" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='Themes[1]' and @criterion='true'])"
+				property="themes" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='BitlyAPIprotocol[1]' and @criterion='true'])"
+				property="bitly" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='SwitchAccounts[1]' and @criterion='true'])"
+				property="switchAccounts" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='CustomThemes[1]' and @criterion='true'])"
+				property="customThemes" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='MultipleAccounts[1]' and @criterion='true'])"
+				property="multipleAccounts" />
+			<copy 
+				path ="boolean(//rootEntries[@effect='Lists[1]' and @criterion='true'])"
+				property="lists" />
+		</xmltask>
+		
+		<echo message = "Available features:" />
+		<echo message = "Timeline: ${timeline}" />
+		<echo message = "Send tweet: ${sendTweet}" />
+		<echo message = "Profile Management: ${profileManagement}" />
+		<echo message = "Short URL: ${shortURL}" />
+		<echo message = "Search: ${search}" />
+		<echo message = "Notifications: ${notifications}" />
+		<echo message = "Upload Picture: ${uploadPicture}" />
+		<echo message = "Themes: ${themes}" />
+		<echo message = "Bitly API: ${bitly}" />
+		<echo message = "Switch Accounts: ${switchAccounts}" />
+		<echo message = "Custom themes: ${customThemes}" />
+		<echo message = "Multiple Accounts: ${multipleAccounts}" />
+		<echo message = "Lists: ${lists}" />
+		
+	</target>
 
 	<target name="clean">
 		<delete dir="${tgt.dir}" />
